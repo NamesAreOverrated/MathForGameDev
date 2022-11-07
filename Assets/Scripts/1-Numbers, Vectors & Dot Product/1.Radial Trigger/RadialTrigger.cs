@@ -15,10 +15,7 @@ namespace Lecture_1.Assignment_1_RadialTrigger
         private void OnDrawGizmos()
         {
             Vector3 pos = transform.position;
-
             Vector3 triggerToPosVec = pos - _triggerTransform.position;
-
-
             float magnitude = Mathf.Sqrt(triggerToPosVec.x * triggerToPosVec.x + triggerToPosVec.y * triggerToPosVec.y);
             Handles.Label((triggerToPosVec / 2) + _triggerTransform.position, $"length: {magnitude}");
             Gizmos.DrawLine(_triggerTransform.position, pos);
